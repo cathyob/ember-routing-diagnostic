@@ -6,24 +6,27 @@ Record your responses inside the fenced code blocks below each question.
     and what are the main task(s) you perform inside an Ember Route?
 
     ```md
-    <!-- your response here -->
+    Define the different 'pages' of the application (e.g. yesterday's lists, list, and list-edit)
+    Provide preferred displayed URL paths (e.g. yesterday's '/lists/:list_id' and 'lists/:list_id/edit'})
     ```
 
-1.  What is the command to generate a route named `boston` nested under
+2.  What is the command to generate a route named `boston` nested under
     `campus`?
 
     ```md
-    <!-- your response here -->
+    ember generate route campus/boston
     ```
 
-1.  Suppose you have a nested route at the URL `/campus/boston`. How would you
+3.  Suppose you have a nested route at the URL `/campus/boston`. How would you
     use the `link-to` helper to generate an appropriate link?
 
     ```md
-    <!-- your response here -->
+    On the Boston campus' page you could put:
+      {{#link-to 'campus'}}Back{{/link-to}}
+    in order to allow the user to go back to the page of the list of campuses
     ```
 
-1.  Explain **at least** two differences between the following two route
+4.  Explain **at least** two differences between the following two route
     definitions.
 
     ```js
@@ -35,10 +38,11 @@ Record your responses inside the fenced code blocks below each question.
     ```
 
     ```md
-    <!-- your response here -->
+    The first route 1) nests the product within the products page directly 2) as a function
+    The second route creates the route separately but makes it look like it is nested with the URL
     ```
 
-1.  Suppose we have the following route definition:
+5.  Suppose we have the following route definition:
 
     ```js
     this.route('movie', { path: '/movies/:movie_id' }); // <= 👀 here
@@ -48,11 +52,11 @@ Record your responses inside the fenced code blocks below each question.
     value `'123'` inside a Route?
 
     ```md
-    <!-- your response here -->
+    I am not 100% sure about what this is asking - 123 must be a preestablished movie_id in order for it to be a valid route, otherwise it will load an error (e.g. blank page if situation not accounted for)
     ```
 
 1.  Inside a template, how do we reference data provided by a Route?
 
     ```md
-    <!-- your response here -->
+    Use an each to iterate through the data and build each model as an item on the page.
     ```
